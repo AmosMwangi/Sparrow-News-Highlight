@@ -10,7 +10,7 @@
 
 A simple webapp the helps in showing news highlight from diffrent news sources. No woories if you missed news due to lots of activites you had to do, this website has got you coverd.
 
-![Alt text](/home/ermoh/Music/News/reademe.png?raw=true "Optional Title")
+![Alt text](reademe.png?raw=true "Optional Title")
 
 ## Setup/Installation Requirements
 
