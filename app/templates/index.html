@@ -1,0 +1,78 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
+<!-- Styles block -->
+
+{% block styles%} {{ super() }}
+
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+<link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+
+<style>
+  h3:hover {
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+  @keyframes shake {
+
+    10%,
+    90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+      transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
+</style>
+
+
+{% endblock %}
+
+
+
+<!-- Content block -->
+
+{% block content%}
+<div class="container">
+
+
+  <h3 style="  font-family: 'Monoton', cursive; color: green; margin-top: 6em; text-align: center;" id="technology">
+    Technology News</h3>
+  <hr>
+
+  {{ macro.displaySourceList(technology_sources)}}
+
+
+  <h3 style="  font-family: 'Monoton', cursive; color: green; margin-top: 3em; text-align: center;" id="entertainment">
+    Entertainment News</h3>
+  <hr>
+
+  {{ macro.displaySourceList(entertainment_sources)}}
+
+  <h3 style="  font-family: 'Monoton', cursive; color: green; margin-top: 3em; text-align: center;" id="sports">Sports
+    News</h3>
+  <hr>
+
+  {{ macro.displaySourceList(sports_sources)}}
+
+</div>
+
+
+{%endblock%}
