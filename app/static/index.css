@@ -1,0 +1,21 @@
+#body {
+    transition: all .6s ease-in-out !important;
+}
+
+#body:hover {
+    -ms-transform: scale(1.2) !important;
+    -webkit-transform: scale(1.2) !important;
+    transform: scale(1.01) !important;
+
+}
+
+#card {
+    transition: all .6s ease-in-out !important;
+}
+
+#card:hover {
+    -ms-transform: scale(5) !important;
+    -webkit-transform: scale(5) !important;
+    transform: scale(5) !important;
+    background-color: lightblue;
+}
