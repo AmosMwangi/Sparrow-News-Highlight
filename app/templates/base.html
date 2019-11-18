@@ -4,14 +4,22 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- styles lock -->
+    {% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+    {% endblock %}
+
     {% if title %}
     <title> {{ title }} </title>
     {% else %}
-    <title> Sparrow Movies </title>
+    <title> Sparrow News </title>
     {% endif %}
+
 </head>
 
-<body>
+<body id="body">
 
     <!-- Navbar block  -->
     {% block navbar %}
@@ -28,10 +36,11 @@
     {% block footer %}
 
     <section style="margin: 10em; background-color:black;">
-        <p>made ith passion</p>
+        <p>made with passion</p>
     </section>
 
     {% endblock %}
 </body>
+
 
 </html>
