@@ -1,12 +1,9 @@
 {% extends 'base.html'%}
 {% import 'macros.html' as macro%}
 
-<!-- Styles block -->
 
-{% block styles%} {{ super() }}
-
-<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
-<link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+{% block styles%}
+{{ super() }}
 
 <style>
   h3:hover {
@@ -39,7 +36,6 @@
       transform: translate3d(4px, 0, 0);
     }
   }
-
 </style>
 
 
@@ -72,7 +68,49 @@
 
   {{ macro.displaySourceList(sports_sources)}}
 
+
 </div>
+<!-- footer -->
+<section>
+  <section style="height:80px;"></section>
+  <div class="row" style="text-align:center;">
+  </div>
+  <!----------- Footer ------------>
+  <footer class="footer-bs">
+    <div class="row">
+      <div class="col-md-3 footer-brand animated fadeInLeft">
+        <img src="http://logo-inspiration.com/wp-content/uploads/2016/01/Black_sparrow_logo_tn.png" id="footer-img" alt="">
+        <h2>Sparrow News</h2>
+        <p style="font-size: 18px;">The best news highlight</p>
+      </div>
+      <div class="col-md-4 footer-nav animated fadeInUp">
+        <p>Information and data, this are one of the most valuble resourses in our daily life. </p>
+        <p>It's part of our daly life. Makes us grow, build and do greater things that sorround us.</p>
+        <p>Were here to always keep you info formed to the very best.</p>
+      </div>
+      <div class="col-md-2 footer-social animated fadeInDown">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/">Facebook</a></li>
+          <li><a href="https://twitter.com/login?lang=en">Twitter</a></li>
+          <li><a href="https://www.instagram.com/">Instagram</a></li>
+          <li><a href="https://rss.com/">RSS</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 footer-ns animated fadeInRight">
+        <h3>Subscribe</h3>
+        <p style="font-size: 16px;">Always get informed on the trending news.</p>
+        <p>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Enter email addres..">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
+            </span>
+          </div>
+        </p>
+      </div>
+    </div>
+  </footer>
 
-
+</section>
 {%endblock%}
