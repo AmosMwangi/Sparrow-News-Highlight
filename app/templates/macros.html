@@ -1,12 +1,13 @@
 {% macro displaySourceList(source_list) %}
 
+
 {% for source_row in source_list |batch(4)%}
 
 <div class="row">
     {% for sources in source_row %}
     <div class="col-md-3">
 
-        <div class="panel panel-default wow fadeIn" data-wow-duration="3.5s" id="body">
+        <div class="panel panel-default wow fadeIn" data-wow-duration="3.5s" id="card">
             <div class="panel-heading">
                 <!-- <a href="{{sources.url}}" class="btn btn-outline-primary" style="text-align: center;">
                     {{ sources.name}}
@@ -15,13 +16,14 @@
             <div class="panel-body">
                 <p>
                     {{ sources.description |truncate(100)}}
-
                 </p>
                 <a href="{{sources.url}}" class="btn btn-primary btn-sm">{{sources.name}}</a>
             </div>
         </div>
     </div>
     {% endfor %}
+
+    
 
 </div>
 {% endfor %}
